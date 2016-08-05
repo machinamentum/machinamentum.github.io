@@ -64,6 +64,17 @@ The terminal should support a robust scripting language to allow the user to aut
 <p>iOS and Window's MetroUI are forward-thinking systems. They maximize simplicity while minimizing (or trying to) friction. A simple tile-based UI would be an ideal solution to support philosophy(6). It would allow the user to use a keyboard and mouse, a touch screen, a gamepad, or any other abstract input devices without any compromises. This could be further extended to allow navigating the entirety of the filesystem from this interface.</p>
 
 <p>If well-executed, we could do away with desktop environments. Although they're highly preferred now on desktop PC's, I believe power-users will become accustomed to these low-friction systems.</p>
+
+<h3>
+<a id="developer-tools" class="anchor" href="#developer-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developer Tools</h3>
+
+<p>Developer tools for many OS' tend to be bloated and not very user friendly. Although we can't strictly avoid legacy toolchains, we can at least provide a better user-experience for developers as part of the OS ecosystem.</p>
+
+<p><strong>Debugger</strong>
+One of the things Windows does right that Unix-based OS' do wrong is that Windows provides debugging utilities as part of the kernel. Anyone wishing to implement a custom debugger can simply link against the kernel's public interface library and can get language-agnostic debugging callbacks that any user program can easily interpret and manipulate. We can take this core idea of the debugger being a part of the OS a little further by having executable object parsing, op-code disassembling, and symbol information loading being shipped as part of the debugging API. User-built debuggers don't have to rely on these OS provided utilities, but the advantage to having a standard API for these is that anyone trying to implement a reasonable debugger without large dependencies, can just depend on the OS provided libraries and they should just work.</p>
+
+<p><strong>API deprecation</strong>
+Some API designers tend to believe that deprecation is "mark for removal". I don't agree with this idea. A deprecated API should remain available as long as there is software to depend on it. If the API in question breaks one of the core philosophies, it may be justifiable to remove the API from the core OS, but it must still be accessible to any user who wishes to use it through some other means (such as a compatibility package).</p>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
