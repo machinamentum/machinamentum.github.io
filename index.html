@@ -75,6 +75,19 @@ One of the things Windows does right that Unix-based OS' do wrong is that Window
 
 <p><strong>API deprecation</strong>
 Some API designers tend to believe that deprecation is "mark for removal". I don't agree with this idea. A deprecated API should remain available as long as there is software to depend on it. If the API in question breaks one of the core philosophies, it may be justifiable to remove the API from the core OS, but it must still be accessible to any user who wishes to use it through some other means (such as a compatibility package).</p>
+
+<h3>
+<a id="adoption" class="anchor" href="#adoption" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adoption</h3>
+
+<p>This will probably be the trickiest part to execute. If we look at Steam's <a href="hardware%20survey">http://store.steampowered.com/hwsurvey</a> alone, Windows dominates the market at 95% of users. Although this is just based on gamers, I'm sure these numbers tip even more in favor of Windows for casual PC users and business users. I don't believe Mac OSX is a real competitor in this space since the target for this OS would be PC users (where Mac OSX is solely designed for Mac devices). Although Linux is somewhat popular in the open source space, I don't think it is a direct competitor. Adoption for Linux is still very small and still suffers from some of the problems I'll outline below.</p>
+
+<p><strong>GPU drivers and games</strong>
+This will be one of the most important aspects of the OS to get the gaming space to adopt. Unfortunately, the main issue here is a chicken and egg problem. In order to get GPU vendors to implement drivers for our OS we need to have a significant standing in the gaming space by having games and users. In order to have games and users, we need to have good driver support to get developers to even consider porting their games. Fortunately, we can still get the process started by implementing our own drivers for a subset of hardware (Intel's integrated graphics for example have <a href="open%20specifications">https://www.x.org/docs/intel/</a>. Although this is less than ideal, this would be a step in the right direction.</p>
+
+<p><strong>Pre-installed on devices</strong>
+This would be a goal to reach much farther in development, but it is very important to get the OS established as software that is pre-installed on machines. This is one of the main aspects of Linux that causes its low adoption rate (although Ubuntu tried this for awhile and failed).</p>
+
+<p>I'll explain the importance of this with an analogy. When users purchase an Android device for example, most do not buy the device with the intention of side-loading a different flavor of Android. Most users purchase an Android phone and use the pre-installed version of Android because it is just there and there's no friction involved in having to set it up. Likewise, if Android phones only shipped with vanilla versions of Android with the option of installing manufacturer versions, the install base for manufacturer-based versions (i.e., Samsung's TouchWiz or HTC's Sense) would be much lower, perhaps even near non-existent. To further expand on this thought, CyanogenMod (arguably the largest non-OEM Android version, which isn't typically pre-installed to devices) claimed in <a href="August%202015%20to%20have%2050M+%20users">https://www.instagram.com/p/6IUuRVNH_b/</a>. According to <a href="The%20Verge">http://www.theverge.com/2015/8/20/9181269/gartner-q2-2015-smartphone-sales</a>, Android phone sales had hit ~271M units <em>in just the quarter leading up to</em> August 2015. The number of Android devices with pre-installed versions far, <em>far</em> out weigh the number with custom OS versions installed. </p>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
