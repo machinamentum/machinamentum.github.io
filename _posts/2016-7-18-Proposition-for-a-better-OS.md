@@ -1,4 +1,9 @@
-## Proposition for a better OS
+---
+layout: post
+title: Proposition for a better OS
+categories: [OS]
+---
+
 ### Introduction
 Over the past few years I've been increasingly losing interest in interacting with major operating systems for my day-to-day needs. Major operating systems have become largely bloatware that is more intrusive to the user's experience than it is useful. I will try to outline the surface features at this time. Features that are non-user facing (within the kernel, programming interface, etc..) will be outlined at a later time.
 
