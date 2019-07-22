@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jiyu: A Programming Language
+title: Jiyu - A Programming Language
 categories: [compilers, programming]
 ---
 
