@@ -55,7 +55,7 @@ func identity_matrix() -> Matrix {
 	return m
 }
 ```
-Variables are zero-initialized by default in this language. There’s currently no wait to declare an uninitialized variable, but that is on the list of things to do.
+Variables are zero-initialized by default in this language. There’s currently no way to declare an uninitialized variable, but that is on the list of things to do.
 Structs may be populated by any other type of declaration, including functions. There’s currently no notion of member-functions, however, that’s another thing to come in the future.
 
 ```swift
