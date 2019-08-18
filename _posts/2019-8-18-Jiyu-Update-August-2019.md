@@ -66,7 +66,7 @@ func @metaprogram main() {
 
 * Jiyu programs can now be debugged in your favorite debugger! 
 
-[Jiyu Program in MSVC debugger](/assets/2019-8-18-Jiyu-Update-August-2019_MSVC_debugging.PNG)
+![Jiyu Program in MSVC debugger](/assets/2019-8-18-Jiyu-Update-August-2019_MSVC_debugging.PNG)
 
 * Aggregate types are now passed via an invisible reference.
 * As mentioned previously, one can now specify a target triple to the compiler. LLVM will honor this, enabling cross-compilation.
