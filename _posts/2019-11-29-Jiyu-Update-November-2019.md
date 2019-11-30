@@ -19,6 +19,7 @@ It has been a awhile seen I've written one of these. I had taken some time off f
  * [castano](https://github.com/castano/) has added an open-half version of _for_, which excludes the value of the upper-bound expression of the _for_ range. Example: "for 0 ..< 2 { ... }", would be equivalent of "for { int it = 0; it < 2; it += 1) { ... }" in C.
  * _if_-conditions now have coerce-to-bool. Integer, float, and pointer-types are now automatically compared to literal-0, string is automatically compared to empty-string.
  * There is now syntax for calling member-functions of structs with more ease:
+
 ```swift
 struct My_Struct {
 	var i: int;
