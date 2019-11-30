@@ -47,7 +47,7 @@ func my_func() {
 * [castano](https://github.com/castano/) has added compiler_load_string(), exposing previously internal functionality to directly compile code from strings, in metaprograms.
 * Cross-compilation support has been improved. I have demonstrated [running Jiyu code on an iOS device](https://twitter.com/machinamentum/status/1195569426105536512?s=20), and [running Jiyu code bare-metal under Qemu](https://twitter.com/machinamentum/status/1193671625771769856?s=20).
 
-Additionally, there have been a number of fixes and changes to improve the compiler.
+Additionally, there have been a number of fixes and changes to improve the compiler, by myself and others.
 
 There's currently work being done to import C-headers directly into Jiyu code without any external tools. I will write another post documenting that once it is working well.
 
