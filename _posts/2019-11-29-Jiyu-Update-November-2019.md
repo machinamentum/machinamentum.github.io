@@ -6,7 +6,7 @@ categories: [compilers, programming]
 
 It has been a awhile seen I've written one of these. I had taken some time off from working on the compiler to focus my free time on learning some traditional arts. That being said, there's a number of changes to talk about so let's get into it.
 
- * There is now a psuedo-test-suite program located at <jiyu>/tests.jyu. This automatically compiles the test programs in <jiyu>/tests. This is a way to quickly verify that changes to the compiler don't break some basic features.
+ * There is now a psuedo-test-suite program located at \<jiyu>/tests.jyu. This automatically compiles the test programs in \<jiyu>/tests. This is a way to quickly verify that changes to the compiler don't break some basic features.
  * String-literals can be implicitly cast to *uint8 and *int8. This is a convinience for passing string-literals to C functions.
  * Added compiler_run_metaprogram(). This function allows metaprograms to compile and run other programs at compile-time.
  * There's now support for loading libraries that the user has specified with the _library_ keyword into metaprograms. This is a seemless operation, so there is no extra work required of the user. This may not entirely work with user-installed libraries on Linux/Mac at the moment, but this will be improved over time.
@@ -15,7 +15,7 @@ It has been a awhile seen I've written one of these. I had taken some time off f
  * The switch "-triple" is now "-target".
  * [ahmadrosid](https://github.com/ahmadrosid) has added some missing functionality on Linux and the compiler should work on Linux now.
  * Control-flow statements _break_ and _continue_ are now available and working.
- * There is now a version of _for_ that gives a pointer to array elements instead of a const-copy of the elements. The syntax is "for * <array_typed_expression> { ... }".
+ * There is now a version of _for_ that gives a pointer to array elements instead of a const-copy of the elements. The syntax is "for * \<array_typed_expression> { ... }".
  * [castano](https://github.com/castano/) has added an open-half version of _for_, which excludes the value of the upper-bound expression of the _for_ range. Example: "for 0 ..< 2 { ... }", would be equivalent of "for { int it = 0; it < 2; it += 1) { ... }" in C.
  * _if_-conditions now have coerce-to-bool. Integer, float, and pointer-types are now automatically compared to literal-0, string is automatically compared to empty-string.
  * There is now syntax for calling member-functions of structs with more ease:
