@@ -7,6 +7,7 @@ categories: [compilers, programming]
 Progress has been going pretty strong this past monthly-ish period.
 
  * There is now a #clang_import directive. This allows importing declarations from C header files directly into Jiyu scopes. Example:
+ 
  ```swift
  #clang_import "#include <stdio.h>";
  
@@ -14,9 +15,11 @@ Progress has been going pretty strong this past monthly-ish period.
      printf("Hello, Moonman!\n");
  }
  ```
+
 The string following the directive can contain arbitrary C code. This works for a number of C declaration types, including structs, unions, enums, functions, and typedefs. Do note however, that only importing bindings for declarations is supported, there is no support for compiling C function bodies, and there are no plans for Jiyu to replace a C compiler. I have been using this for awhile on Windows, and have even gotten the [nuklear imgui library working without needing to manually write bindings](https://twitter.com/machinamentum/status/1211501147808247808), but this may not work well on Mac/Linux yet if you need to import system headers.
 
  * There is now a mechanism to enable member-function-call syntax for arrays. I have documented this in this demo below:
+ 
  ```swift
  #import "LibC";
 #import "Array";
@@ -65,6 +68,7 @@ func locally_scoped_functions() {
 }
 
  ```
+ 
  * There is now a `-emit-llvm` flag to dump generated LLVM IR to a file.
  * Unions are now available, simply use the `union` keyword in place of `struct`.
  * `break` and `continue` now work for while-loops.
@@ -77,6 +81,7 @@ func locally_scoped_functions() {
  * [castano](https://github.com/castano) has added support for referencing let-constants declared within structs.
  * [castano](https://github.com/castano) has added a Sublime Text highlighting extension.
  * [castano](https://github.com/castano) has added support for multiline string literals similar to how they are implemented in Swift:
+ 
  ```swift
  
 #import "Basic";
@@ -113,10 +118,12 @@ func main() {
 
 }
  ```
+ 
  * Support for passing and returning structs to/from C has been improved.
  * There are now `strideof()` and `alignof()` operators. These return the stride and alignment of any input type. Unlike C, the the size of a struct is the amount of space required to store the struct, the stride is the amount of space needed to store the struct with padding to its alignment.
  * There is now support for unary `!` and unary `~`.
  * There is now support for a rudimentary level of struct inheritance:
+ 
  ```swift
  func test_inheritance() {
     struct Node {
