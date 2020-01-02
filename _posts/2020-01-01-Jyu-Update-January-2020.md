@@ -21,7 +21,7 @@ The string following the directive can contain arbitrary C code. This works for 
  * There is now a mechanism to enable member-function-call syntax for arrays. I have documented this in this demo below:
  
  ```swift
- #import "LibC";
+#import "LibC";
 #import "Array";
 
 // Array module defines:
