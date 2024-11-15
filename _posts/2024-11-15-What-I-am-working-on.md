@@ -80,7 +80,7 @@ Many projects opt to embed Clang to compile C code; sometimes utilizing Clang to
 
 For reference, the following LLVM build has been configued with `cmake -S llvm -B build -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="AArch64;ARM" -DLLVM_ENABLE_PROJECTS="clang"`. AFAICT, this is a best-case scenario for these tools.
 
-**Weight** Running `ls -l` in the LLVM 18 build directory in Release configuration, we can see that the clang binary is 110 megabytes, and the lli interpreter is 36 megabytes. It is unclear to me how much of the bloat can be stripped if one just wants the clang compiler and the LLVM interpreter in one binary, but I think it is safe to assume it would be on the order of 10s or 100s of megabytes. That's far too large, by default.
+Running `ls -l` in the LLVM 18 build directory in Release configuration, we can see that the clang binary is 110 megabytes, and the lli interpreter is 36 megabytes. It is unclear to me how much of the bloat can be stripped if one just wants the clang compiler and the LLVM interpreter in one binary, but I think it is safe to assume it would be on the order of 10s or 100s of megabytes. That's far too large, by default.
 
 ```
 machinamentum@Joshuas-MacBook-Air build % ls -l bin/clang-18 bin/lli
@@ -114,11 +114,5 @@ machinamentum@Joshuas-MacBook-Air cvm % time ./build.sh
 ./build.sh  0.22s user 0.08s system 104% cpu 0.287 total
 machinamentum@Joshuas-MacBook-Air cvm % 
 ```
-
-**Velocity**. Clang and LLVM are just not fast enough for the task.
-
---------------------------------  TODO ----------------------------------------
-
-
 
 
