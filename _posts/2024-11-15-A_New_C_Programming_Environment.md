@@ -18,7 +18,7 @@ So I have set out to build a suitable environment to write low-level systems pro
 
 ![iPad C VM IDE](/assets/2024-11-15-IDE-App.png)
 
-On the surface, the IDE app fairly bare bones: there is a single "tab" for editing just one open file, a file tree, and an output window.
+On the surface, the IDE app is fairly bare bones: there is a single "tab" for editing just one open file, a file tree, and an output window.
 
 ### Errors
 
