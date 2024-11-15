@@ -57,7 +57,7 @@ int main () {
 The attribute `[[vmfn("name_of_function_here")]]` may be declared on a function declaration; this tells the code generator to call *call_vm_function* and to pass the given name as the first argument.
 
 ```c
-[[builtinfn("open_window")]] void openWindow(const char *title);
+[[vmfn("open_window")]] void openWindow(const char *title);
 
 int main () {
 	// Call the open_window VM function with the given title "My App Title"
