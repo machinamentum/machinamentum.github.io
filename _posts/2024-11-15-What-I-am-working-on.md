@@ -16,7 +16,6 @@ So I have set out to build a suitable environment to write low-level systems pro
 
 ## IDE
 
---------------------------------  TODO ----------------------------------------
 <!-- ![iPad C VM IDE](/assets/2024-11-15-IDE-App.png)-->
 
 On the surface, the IDE app fairly bare bones: there is a single "tab" for editing just one open file, a file tree, and an output window.
@@ -25,16 +24,15 @@ On the surface, the IDE app fairly bare bones: there is a single "tab" for editi
 
 Code is being compiled and checked for errors a on continual basis. The IDE integrates deeply with the compiler to provide an error list window, and clicking on an error sets the editor's selection to the _token_ where the error was found. The editor also underlines all tokens where errors are currently being encountered.
 
---------------------------------  TODO ----------------------------------------
 <!-- ![iPad IDE Errors](/assets/2024-11-15-IDE-Errors.mov)-->
 
 ### Environment
 
 What makes the IDE special is the runtime environment. Vertical integration with the CPU emulator enables user code to call special API functions in the IDE to do things such as rendering 3D graphics.
 
---------------------------------  TODO ----------------------------------------
 <!-- ![iPad IDE Graphics](/assets/2024-11-15-IDE-Graphics-Demo.mov)-->
-Sample code: https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08
+
+Sample code: [https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08](https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08)
 
 In the future, one can imagine even extending the editor via plugins writen in C via an API exposed in this way.
 
@@ -47,7 +45,7 @@ _printf_, for example, is entirely implemented within the interpreter engine, in
 
 _VM functions_ (those provided by the app frontend) are registed with the interpreter engine and called via a hash lookup of the name of the function. This is done in user code by calling a built-in function, *call_vm_function*, that takes the name of the VM function and performs a hash lookup to find the frontend callback to call.
 
-```
+```c
 [[builtinfn("call_vm_function")]] void call_vm_func(const char *name, ...);
 
 int main () {
@@ -57,7 +55,7 @@ int main () {
 
 The attribute `[[vmfn("name_of_function_here")]]` may be declared on a function declaration; this tells the code generator to call *call_vm_function* and to pass the given name as the first argument.
 
-```
+```c
 [[builtinfn("open_window")]] void openWindow(const char *title);
 
 int main () {
@@ -106,6 +104,7 @@ cmake -S llvm -B build -DCMAKE_BUILD_TYPE=Release    12.30s user 13.84s system 8
 And another 16 _minutes_ to compile the tools on a modern, fast machine (a M2 MacBook Air with 8GB of RAM, not a ridiculously powerful machine, but not an unreasonably low end machine either). This isn't actually _that_ bad; I've experienced _many_ times in my life having to wait in excess of 30 minutes for an LLVM build.
 
 ```
+cmake --build build -j8  7885.73s user 449.68s system 718% cpu 19:20.42 total
 ```
 
 To build the new project, it takes just _3 tenths_ of a second.
