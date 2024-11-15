@@ -16,7 +16,7 @@ So I have set out to build a suitable environment to write low-level systems pro
 
 ## IDE
 
-<!-- ![iPad C VM IDE](/assets/2024-11-15-IDE-App.png)-->
+![iPad C VM IDE](/assets/2024-11-15-IDE-App.png)
 
 On the surface, the IDE app fairly bare bones: there is a single "tab" for editing just one open file, a file tree, and an output window.
 
@@ -24,13 +24,13 @@ On the surface, the IDE app fairly bare bones: there is a single "tab" for editi
 
 Code is being compiled and checked for errors a on continual basis. The IDE integrates deeply with the compiler to provide an error list window, and clicking on an error sets the editor's selection to the _token_ where the error was found. The editor also underlines all tokens where errors are currently being encountered.
 
-<!-- ![iPad IDE Errors](/assets/2024-11-15-IDE-Errors.mov)-->
+![iPad IDE Errors](/assets/2024-11-15-IDE-Errors.mov)
 
 ### Environment
 
 What makes the IDE special is the runtime environment. Vertical integration with the CPU emulator enables user code to call special API functions in the IDE to do things such as rendering 3D graphics.
 
-<!-- ![iPad IDE Graphics](/assets/2024-11-15-IDE-Graphics-Demo.mov)-->
+![iPad IDE Graphics](/assets/2024-11-15-IDE-Graphics-Demo.mov)
 
 Sample code: [https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08](https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08)
 
