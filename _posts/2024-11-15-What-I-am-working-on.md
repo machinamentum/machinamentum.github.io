@@ -49,7 +49,8 @@ _VM functions_ (those provided by the app frontend) are registed with the interp
 [[builtinfn("call_vm_function")]] void call_vm_func(const char *name, ...);
 
 int main () {
-	call_vm_func("open_window", "My App Title"); // Call the open_window VM function with the given title "My App Title"
+	// Call the open_window VM function with the given title "My App Title"
+	call_vm_func("open_window", "My App Title");
 }
 ```
 
@@ -59,7 +60,8 @@ The attribute `[[vmfn("name_of_function_here")]]` may be declared on a function 
 [[builtinfn("open_window")]] void openWindow(const char *title);
 
 int main () {
-	openWindow("My App Title"); // Call the open_window VM function with the given title "My App Title"
+	// Call the open_window VM function with the given title "My App Title"
+	openWindow("My App Title");
 }
 ```
 Note that in either case, the identifier of the declaration does not need to match the registered name of the VM function being called.
