@@ -22,7 +22,7 @@ On the surface, the IDE app is fairly bare bones: there is a single "tab" for ed
 
 ### Errors
 
-Code is being compiled and checked for errors a on continual basis. The IDE integrates deeply with the compiler to provide an error list window, and clicking on an error sets the editor's selection to the _token_ where the error was found. The editor also underlines all tokens where errors are currently being encountered.
+Code is being compiled and checked for errors on a continual basis. The IDE integrates deeply with the compiler to provide an error list window, and clicking on an error sets the editor's selection to the _token_ where the error was found. The editor also underlines all tokens where errors are currently being encountered.
 
 ![iPad IDE Errors](/assets/2024-11-15-IDE-Errors.mov)
 
