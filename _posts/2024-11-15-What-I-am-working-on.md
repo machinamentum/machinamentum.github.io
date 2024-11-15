@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What I am working on; November 2024 Update
+title: A New C Programming Environment
 categories: [vm, compilers, programming]
 ---
 
