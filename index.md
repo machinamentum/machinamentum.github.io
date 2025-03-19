@@ -2,9 +2,6 @@
 layout: default
 ---
 
-# Projects
-
----
 ## C IDE (Working Title)
 
 ![iPad IDE Graphics](/assets/2024-11-15-IDE-Graphics-Demo.mov){: style="display: block; width:500px; margin-left: auto; margin-right: 10px; float: left;" }{: width="600"}
