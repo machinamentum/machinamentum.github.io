@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 
 ## C IDE (Working Title)
