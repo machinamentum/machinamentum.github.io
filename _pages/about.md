@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-TO BE FILLED IN.
+TO BE FILLED IN (eventually).
