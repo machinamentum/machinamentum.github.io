@@ -24,13 +24,13 @@ On the surface, the IDE app is fairly bare bones: there is a single "tab" for ed
 
 Code is being compiled and checked for errors on a continual basis. The IDE integrates deeply with the compiler to provide an error list window, and clicking on an error sets the editor's selection to the _token_ where the error was found. The editor also underlines all tokens where errors are currently being encountered.
 
-![iPad IDE Errors](/assets/2024-11-15-IDE-Errors.mov)
+{% include video.html src="/assets/2024-11-15-IDE-Errors.mp4" style="border-radius: 5px;" %}
 
 ### Environment
 
 What makes the IDE special is the runtime environment. Vertical integration with the CPU emulator enables user code to call special API functions in the IDE to do things such as rendering 3D graphics.
 
-![iPad IDE Graphics](/assets/2024-11-15-IDE-Graphics-Demo.mov)
+{% include video.html src="/assets/2024-11-15-IDE-Graphics-Demo.mp4" style="border-radius: 5px;" %}
 
 Sample code: [https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08](https://gist.github.com/machinamentum/0c0c12c973915e9bbf45e16fd22eaf08)
 
