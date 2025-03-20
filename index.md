@@ -6,7 +6,7 @@ title: Home
 ## C IDE (Working Title)
 
 
-{% include video.html src="/assets/2024-11-15-IDE-Graphics-Demo.mp4" style="display: block; width:500px; margin-left: auto; margin-right: 10px; float: left; border-radius: 10px;" %}
+{% include video.html src="/assets/2024-11-15-IDE-Graphics-Demo.mp4" style="display: block; width:500px; margin-left: auto; margin-right: 10px; float: left; border-radius: 5px;" %}
 An IDE for writing low-level systems directly on iPad and VisionPro using C. Contains a new C compiler, a virtual machine/emulator environment, and bindings for drawing graphics using Metal.
 
 <br clear="left"/>
